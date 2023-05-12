@@ -1,0 +1,34 @@
+import React from 'react';
+import { useMutatePreferences, usePreferences } from 'src/queries/preferences';
+import { ManagerPreferences } from 'src/types/ManagerPreferences';
+export interface PreferencesStateProps {
+  preferences?: ManagerPreferences;
+}
+
+export interface PreferencesActionsProps {
+  getUserPreferences: () => Promise<ManagerPreferences>;
+  updateUserPreferences: (
+    params: ManagerPreferences
+  ) => Promise<ManagerPreferences>;
+}
+
+export type Props = PreferencesActionsProps & PreferencesStateProps;
+
+const withPreferences = <Props>(
+  Component: React.ComponentType<
+    Props & PreferencesStateProps & PreferencesActionsProps
+  >
+) => (props: Props) => {
+  const { data: preferences, refetch } = usePreferences();
+  const { mutateAsync: updateUserPreferences } = useMutatePreferences();
+
+  return React.createElement(Component, {
+    ...props,
+    preferences,
+    getUserPreferences: () =>
+      refetch().then(({ data }) => data ?? Promise.reject()),
+    updateUserPreferences,
+  });
+};
+
+export default withPreferences;
