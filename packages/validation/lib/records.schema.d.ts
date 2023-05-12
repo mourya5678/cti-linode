@@ -36,7 +36,7 @@ export declare const createRecordSchema: import("yup").ObjectSchema<import("yup/
     type: import("yup/lib/mixed").MixedSchema<any, import("yup/lib/types").AnyObject, any>;
 }>>>;
 export declare const updateRecordSchema: import("yup").ObjectSchema<{
-    [x: string]: import("yup").AnySchema<any, any, any> | import("yup/lib/Reference").default<unknown> | import("yup/lib/Lazy").default<any, any>;
+    [x: string]: import("yup").AnySchema<any, any, any> | import("yup/lib/Lazy").default<any, any> | import("yup/lib/Reference").default<unknown>;
     name: import("yup").StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
     target: import("yup").StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
     priority: import("yup").NumberSchema<number | undefined, import("yup/lib/types").AnyObject, number | undefined>;
@@ -47,7 +47,7 @@ export declare const updateRecordSchema: import("yup").ObjectSchema<{
     ttl_sec: import("yup").NumberSchema<number | undefined, import("yup/lib/types").AnyObject, number | undefined>;
     tag: import("yup").StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
 }, import("yup/lib/object").AnyObject, import("yup/lib/object").TypeOfShape<{
-    [x: string]: import("yup").AnySchema<any, any, any> | import("yup/lib/Reference").default<unknown> | import("yup/lib/Lazy").default<any, any>;
+    [x: string]: import("yup").AnySchema<any, any, any> | import("yup/lib/Lazy").default<any, any> | import("yup/lib/Reference").default<unknown>;
     name: import("yup").StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
     target: import("yup").StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
     priority: import("yup").NumberSchema<number | undefined, import("yup/lib/types").AnyObject, number | undefined>;
@@ -58,7 +58,7 @@ export declare const updateRecordSchema: import("yup").ObjectSchema<{
     ttl_sec: import("yup").NumberSchema<number | undefined, import("yup/lib/types").AnyObject, number | undefined>;
     tag: import("yup").StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
 }>, import("yup/lib/object").AssertsShape<{
-    [x: string]: import("yup").AnySchema<any, any, any> | import("yup/lib/Reference").default<unknown> | import("yup/lib/Lazy").default<any, any>;
+    [x: string]: import("yup").AnySchema<any, any, any> | import("yup/lib/Lazy").default<any, any> | import("yup/lib/Reference").default<unknown>;
     name: import("yup").StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
     target: import("yup").StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
     priority: import("yup").NumberSchema<number | undefined, import("yup/lib/types").AnyObject, number | undefined>;
